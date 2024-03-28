@@ -1262,6 +1262,14 @@ flex-direction:column;
 @media @desktop {
   
 /** Image Aligned to the Left**/
+  
+  
+ body.sqs-edit-mode-active {	
+   [data-current-styles*='"customContentWidth": 62'].horizontal-alignment--left {
+     top:0 !important;
+     
+   }
+  }
 
 [data-current-styles*='"customContentWidth": 62'].horizontal-alignment--left {
     min-height:100vh !important;
