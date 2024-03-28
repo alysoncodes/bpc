@@ -1,3 +1,379 @@
+//new gallery section with publications
+@keyframes FeaturedIn {
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-300%);
+    -webkit-transform: translateX(-300%);
+  }
+}
+
+section[data-section-id="64e507c106f6bf05f50534b9"] {
+ overflow:hidden;
+
+ .gallery-grid-item-wrapper img  {
+  object-fit:contain !important;
+}
+
+  
+  
+@media only screen and (max-width: 640px) {.gallery-grid-wrapper {animation:  FeaturedIn 12s linear 0.01s infinite;}}
+  
+@media only screen and (min-width: 641px) {.gallery-grid-wrapper {animation:  FeaturedIn 60s linear 0.01s infinite;}}
+  
+  
+  
+.gallery-grid-wrapper {
+  display:flex !important;
+  padding-top: 0vh; padding-bottom: 8vh;
+
+@media only screen and (min-width: 641px) {.gallery-grid-item {
+   min-width:12%;
+     margin-right:5%; 
+  }}
+  
+   @media only screen and (max-width: 640px) {.gallery-grid-item {
+   min-width:50% !important;
+     margin-right:5rem; 
+     }}
+  
+}
+
+.gallery-grid-item:not([data-show]) .gallery-grid-item-wrapper {
+    opacity: 1;
+  
+}
+.gallery-grid-item:not([data-show]) .gallery-grid-item-caption {
+    opacity: 1;
+    visibility: visible !important;
+}
+
+.gallery-grid[data-show-captions="false"] .gallery-grid-item-caption {
+    display: none
+}
+
+.gallery-grid[data-show-captions="true"][data-animation="none"] .gallery-grid-item-caption {
+    transition: none
+}
+}
+
+section[data-section-id="64e507c106f6bf05f50534b9"] {
+
+@media screen and (max-width:767px) {
+.gallery-grid-item {
+   min-width:20% !important;
+     margin-right:5%; 
+  }
+
+}
+
+.gallery  {
+    min-height:initial !important;
+  }
+
+}
+
+//hiding old testimonial sections incase you want to reuse them
+
+section[data-section-id="62a8d34fa66bed56b7f6ac05"], section[data-section-id="62af5b42ea8da2170639e047"], section[data-section-id="62ae63bc23f43809a90e6d3b"], section[data-section-id="62ab9bdf53897c03b0e4531c"], section[data-section-id="62b11192f14d6f4a64054284"],section[data-section-id="62af96a45217c90a5d419461"]{
+  display: none;
+}
+
+//use this to hide the header inside the footer when editing
+section[data-section-id="62b236d809d3f80d7a041c98"]{
+  //display: none;
+}
+section[data-section-id="64caef5da3f5dd2ed08d46bf"]{
+  //display: none !important;
+}
+body.sqs-edit-mode-active footer .page-section:first-child {
+position:relative !important; 
+  
+}
+/**
+//NEW testimonial section
+
+
+
+/**CENTERED CAROUSEL ARROWS**/
+section.dark .sqs-gallery-design-carousel a.summary-title-link{
+  font-size: 3rem!important;
+}
+
+section.dark .sqs-gallery-design-carousel p.sqsrte-large{
+  font-size: .8rem !important;
+}
+
+section.dark {
+  .sqs-gallery-design-carousel
+   {
+     
+     a.summary-title-link{
+       font-size: 2rem;
+       line-height: 2.5rem;
+     }
+     div.summary-title{
+       padding-bottom: 2rem !important;
+       
+     }
+
+   @media @desktop {
+
+  .sqs-gallery-controls .previous{
+    text-align:center;
+    position:absolute;
+    left:-20%;
+    width:10em;
+    top:40%;
+    transform:translateY(-50%);
+    margin-right: 0px!important;
+  }
+
+  .sqs-gallery-controls .sqs-disabled {
+    opacity:1;
+  }
+
+.sqs-gallery-controls .previous::after{
+  content: '';
+  //background-color: red;
+  background: url('https://static1.squarespace.com/static/6258749c8584fd3a695471c3/t/64cd2f595184703912986023/1691168601699/white_arrow_left.png');
+  display: block;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 230px;
+  height: 50px;
+  background-position: left;
+  text-align:left;
+  }
+ /*.sqs-gallery-controls .previous:hover{
+    cursor:pointer;
+  }
+ .sqs-gallery-controls .previous:hover::before{
+    color:black!important;
+     }/**change color upon hover**/
+
+  
+.sqs-gallery-controls .previous::Before{
+  content: '';
+  //font-family: 'essential';
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .09em;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 6rem;
+  background-position: left;
+  text-align:center;
+  //background-color: red;
+  padding-bottom: .5em;
+  }
+
+
+ .sqs-gallery-controls .next{
+   text-align:right;
+   right:-10%;
+   position:absolute;
+   width:5em;
+   top:40%;
+   transform:translateY(-50%);
+  }
+
+
+  .sqs-gallery-controls .next::before{
+  
+    content: '';
+  //background-color: red;
+    padding-bottom: .5em;
+  //font-family: 'essential';
+  text-transform: uppercase;
+  font-weight: normal;
+  //line-height: 2rem !important;
+  letter-spacing: .09em;
+  color:white!important;
+  width: 6rem;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 6rem;
+  background-position: right !important;
+  text-align:right;
+  }
+     
+.sqs-gallery-controls .next::after{
+  content: '';
+  //background-color: red;
+  background: url('https://static1.squarespace.com/static/6258749c8584fd3a695471c3/t/64cd2f598aaa0141a6074405/1691168601750/white_arrow_right.png');
+  display: block;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 150px;
+  height: 50px;
+  background-position: right;
+  text-align:right;
+  }
+ }   
+  /** .sqs-gallery-controls .next:hover{
+    cursor:pointer;
+  }
+  .sqs-gallery-controls .next:hover::before{
+    color:black!important;
+}
+*/
+  .sqs-gallery-controls .previous:focus, .sqs-gallery-controls .next:focus {
+outline-width:0 !important;
+}
+/**MOBILE CODE**/
+
+  @media @mobile{
+    .sqs-gallery-controls .previous{
+    transform:translateY(-50%);
+    position:absolute;
+    margin:0px;
+    left:20%;
+    bottom:0%;
+    text-align:center;
+  }
+  .sqs-gallery-controls .sqs-disabled {
+    opacity:1;
+  }
+.sqs-gallery-controls .previous::before{
+  content:'\2190';
+  color:white!important;
+  font-size: 1.5em;
+  width: 2em;
+  }
+
+  
+ .sqs-gallery-controls .next{
+    transform:translateY(-50%);
+    position:absolute;
+    margin:0px;
+    right:20%;
+    bottom:0%;
+    text-align:center;
+  }
+  .sqs-gallery-controls .next::before{
+  content:'\2192';
+  color:white!important;
+  font-size: 1.5em;
+  width: 2em;
+  }
+  
+  }
+     
+     /* TABLET */
+     @media @tablet{
+      .sqs-gallery-controls .previous{
+    text-align:center;
+    position:absolute;
+    left:-25%;
+    width:5em;
+    top:50%;
+    transform:translateY(-50%);
+    margin-right: 0px!important;
+  }
+
+  .sqs-gallery-controls .sqs-disabled {
+    opacity:1;
+  }
+
+.sqs-gallery-controls .previous::after{
+  content: '';
+  //background-color: red;
+  background: url('https://static1.squarespace.com/static/6258749c8584fd3a695471c3/t/64cd2f595184703912986023/1691168601699/white_arrow_left.png');
+  display: block;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 130px;
+  height: 10px;
+  background-position: left;
+  text-align:left;
+  }
+ /*.sqs-gallery-controls .previous:hover{
+    cursor:pointer;
+  }
+ .sqs-gallery-controls .previous:hover::before{
+    color:black!important;
+     }/**change color upon hover**/
+
+  
+.sqs-gallery-controls .previous::Before{
+  content: '';
+  //font-family: 'essential';
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .09em;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 6rem;
+  background-position: left;
+  text-align:center;
+  //background-color: red;
+  padding-bottom: .5em;
+  }
+
+
+ .sqs-gallery-controls .next{
+   text-align:right;
+   right:-20%;
+   position:absolute;
+   width:5em;
+   top:50%;
+   transform:translateY(-50%);
+  }
+
+
+  .sqs-gallery-controls .next::before{
+  
+    content: '';
+  //background-color: red;
+    padding-bottom: .5em;
+  //font-family: 'essential';
+  text-transform: uppercase;
+  font-weight: normal;
+  //line-height: 2rem !important;
+  letter-spacing: .09em;
+  color:white!important;
+  width: 6rem;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 6rem;
+  background-position: right !important;
+  text-align:right;
+  }
+     
+.sqs-gallery-controls .next::after{
+  content: '';
+  //background-color: red;
+  background: url('https://static1.squarespace.com/static/6258749c8584fd3a695471c3/t/64cd2f598aaa0141a6074405/1691168601750/white_arrow_right.png');
+  display: block;
+  background-repeat: no-repeat !important;
+  bottom: 0;
+  background-size: contain !important;
+  width: 130px;
+  height: 10px;
+  background-position: right;
+  text-align:right;
+  }
+ }   
+     
+     
+     
+  }
+}
+
+//end testimonial section
+
+
 //fixes
 
 //FIX IG ISSUE
@@ -893,7 +1269,7 @@ flex-direction:column;
   	position:absolute !important;
     top:-6vw !important;
   	width:100%;
-   
+    //display: none;
   	background-color: @beige;
     .section-background {
      width:50% !important;
@@ -1147,6 +1523,17 @@ body:not(.sqs-edit-mode){
 /*------------------------------------
  *  FOOTER
  *------------------------------------*/
+
+
+//credentials image size
+@media @desktop{
+#block-yui_3_17_2_1_1655767185756_39843,#block-yui_3_17_2_1_1690764733900_36643{
+  scale: 2.5;
+}
+#block-yui_3_17_2_1_1691168680410_64034{
+  scale:.5;
+}
+}
 //adding pattern element to footer
 @media @desktop{
 section[data-section-id="6258749c8584fd3a695471f6"]::before{
@@ -1197,6 +1584,10 @@ section[data-section-id="6258749c8584fd3a695471f6"]::before{
     //transform: scale(.6);
   }
   
+}
+
+#footer-sections, #page {
+z-index:unset !important;
 }
 /*------------------------------------
  * PAGES: HOME
